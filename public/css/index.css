@@ -1,0 +1,39 @@
+img.greetings {
+    height: 200px;
+}
+
+.flex.horizontal.greetings {
+    align-items: flex-start;
+    justify-content: space-around;
+    background-color: white;
+    color: black;
+    min-height: 400px;
+    flex-wrap: wrap;
+}
+
+.flex.column.greetings.img {
+    align-items: center;
+}
+
+.flex.column.greetings > .content {
+    text-align: justify;
+}
+
+.flex.column > .head {
+    min-height: 100px;
+}
+
+.flex.horizontal.greetings > div {
+    width: 33.333%;
+    padding: 0 2%;
+}
+
+@media (max-width: 768px) {
+    .flex.horizontal.greetings > div {
+        width: 100%;
+    }
+
+    .flex.column.greetings {
+        align-items: center;
+    }
+}
