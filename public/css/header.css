@@ -46,7 +46,9 @@
     margin: 0 auto;
     align-items: baseline;
     justify-content: space-around;
-    padding: 8% 10% 4% 10%;
+    margin-top: 100px;
+    padding: 0 10%;
+    padding-bottom: 4%;
 }
 
 .navigation a {

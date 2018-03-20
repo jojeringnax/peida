@@ -69,11 +69,25 @@ input.signupform.text {
     width: 240px;
     height: 38px;
 }
+
 /**
         Posts css
  */
 
 
+/**
+        Questions css
+ */
+
+.flex.questions {
+    background-color: #201600;
+    color: white;
+    align-items: flex-end;
+}
+
+.sveta_portrait > img {
+    height: 190px;
+}
 
 @media (max-width: 768px) {
     /**

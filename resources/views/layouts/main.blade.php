@@ -10,7 +10,7 @@
         <title>@yield('title')</title>
     </head>
     <body>
-        <header style="background-color: #201600; height: 700px;">
+        <header style="background-color: #201600;">
             <div class="flex new_letter_search">
                 <div class="row new_letter_search">
                     <div class="new col-lg-4 col-md-4 col-sm-4 col-xs-4">
@@ -34,7 +34,7 @@
             </div>
             <div class="flex navigation">
                 <a href="#blog">БЛОГ</a>
-                <a href="#answers">ВОПРОС-ОТВЕТ</a>
+                <a href="#questions">ВОПРОС-ОТВЕТ</a>
                 <a href="#library">БИБЛИОТЕКА</a>
                 <a href="#anounce">АНОНСЫ</a>
             </div>

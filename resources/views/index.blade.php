@@ -7,4 +7,5 @@
     @include('index.greeting')
     @include('index.singupform')
     @include('index.posts')
+    @include('index.questions')
 @endsection
