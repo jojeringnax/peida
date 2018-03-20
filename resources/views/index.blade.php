@@ -5,4 +5,6 @@
 
 @section('content')
     @include('index.greeting')
+    @include('index.singupform')
+    @include('index.posts')
 @endsection
