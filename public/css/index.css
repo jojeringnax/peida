@@ -119,14 +119,17 @@ input.signupform.text {
     padding: 25px 0;
     align-items: flex-start;
     justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 .flex.column.library_search {
     align-items: flex-start;
+    padding: 0 40px;
 }
 
 .flex.column.library_filter {
     align-items: center;
+    padding: 0 60px;
 }
 
 .library_word {
@@ -198,6 +201,35 @@ input.signupform.text {
     text-decoration: none;
     background: #e5e6e7;
     color: #7f7d7c;
+}
+
+/**
+        Charity css
+*/
+
+.flex.main.charity {
+    justify-content: center;
+}
+
+.flex.column.charity {
+    align-items: center;
+    justify-content: space-between;
+}
+
+.charity_text {
+    font-size: 14px;
+    color: black;
+    line-height: 1.2;
+    font-weight: bold;
+    padding: 40px 0 20px 0;
+}
+
+.charity_image {
+    padding: 20px 0 10px 0;
+}
+
+.charity_image > img {
+    width: 320px;
 }
 
 @media (max-width: 768px) {

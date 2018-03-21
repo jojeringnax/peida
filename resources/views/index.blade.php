@@ -10,4 +10,5 @@
     @include('index.questions')
     @include('index.library')
     @include('index.announces')
+    @include('index.charity')
 @endsection
