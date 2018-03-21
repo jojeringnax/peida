@@ -6,6 +6,10 @@
     flex-direction: column;
 }
 
+.full-width {
+    width: 100%!important;
+}
+
 .row.new_letter_search {
     text-align: center;
     width: 20%;

@@ -36,7 +36,7 @@
                 <a href="#blog">БЛОГ</a>
                 <a href="#questions">ВОПРОС-ОТВЕТ</a>
                 <a href="#library">БИБЛИОТЕКА</a>
-                <a href="#anounce">АНОНСЫ</a>
+                <a href="#announces">АНОНСЫ</a>
             </div>
         </header>
         @yield('content')

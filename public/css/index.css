@@ -142,7 +142,63 @@ input.signupform.text {
     letter-spacing: 9px;
 }
 
+/**
+        Announces css
+ */
 
+.flex.announces {
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+
+.announces_label {
+    color: black;
+    font-size: 32px;
+    font-weight: 200;
+    margin-top: 40px;
+}
+
+.web-lessons {
+    background: #e2e2e2;
+    margin: 20px 20px 0 0;
+}
+
+.web-lessons_picture > img {
+    padding: 40px 130px 60px 130px;
+    height: 300px;
+}
+
+.web-lessons > .flex.column {
+    align-items: center;
+    justify-content: space-around;
+}
+
+.web-lessons_label {
+    color: #495274;
+}
+
+.web-lessons_archive {
+    margin-top: 60px;
+    background: #e5e6e7;
+    text-align: center;
+    color: #7f7d7c;
+    font-size: 26px;
+    padding: 20px 0;
+}
+
+.web-lessons_archive:hover {
+    text-decoration: none;
+    color: #e5e6e7;
+    background: #7f7d7c;
+}
+
+.web-lessons_archive:focus {
+    text-decoration: none;
+    background: #e5e6e7;
+    color: #7f7d7c;
+}
 
 @media (max-width: 768px) {
     /**

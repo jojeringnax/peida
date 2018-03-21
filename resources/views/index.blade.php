@@ -9,4 +9,5 @@
     @include('index.posts')
     @include('index.questions')
     @include('index.library')
+    @include('index.announces')
 @endsection
