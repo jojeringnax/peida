@@ -8,4 +8,5 @@
     @include('index.singupform')
     @include('index.posts')
     @include('index.questions')
+    @include('index.library')
 @endsection

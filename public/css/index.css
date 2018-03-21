@@ -114,6 +114,34 @@ input.signupform.text {
         Library css
  */
 
+.flex.library {
+    background-color: #afaeae;
+    padding: 25px 0;
+    align-items: flex-start;
+    justify-content: space-around;
+}
+
+.flex.column.library_search {
+    align-items: flex-start;
+}
+
+.flex.column.library_filter {
+    align-items: center;
+}
+
+.library_word {
+    font-size: 24px;
+    color: black;
+    font-weight: 100;
+}
+
+.library_letters {
+    font-size: 40px;
+    font-weight: bold;
+    color: #666;
+    letter-spacing: 9px;
+}
+
 
 
 @media (max-width: 768px) {
