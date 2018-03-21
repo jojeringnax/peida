@@ -82,12 +82,39 @@ input.signupform.text {
 .flex.questions {
     background-color: #201600;
     color: white;
+    padding: 30px 0 19px 40px;
+}
+
+.flex.questions_rules {
     align-items: flex-end;
+    flex-wrap: wrap;
+}
+
+.flex.questions_rules > div {
+    margin: 0 15px;
+}
+
+.ask_a_question {
+    font-size: 32px;
+    letter-spacing: 3px;
+    font-weight: 100;
 }
 
 .sveta_portrait > img {
     height: 190px;
 }
+
+.flex.questions_slider {
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+/**
+        Library css
+ */
+
+
 
 @media (max-width: 768px) {
     /**
