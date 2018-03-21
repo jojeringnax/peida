@@ -1,0 +1,66 @@
+
+/**
+        SignupForm css
+ */
+
+.main.signupform {
+    height: 150px;
+    background-color: lightgrey;
+}
+
+.flex.signupform {
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap-reverse;
+    width: 50%;
+    padding: 50px 0;
+}
+
+.envelope {
+    background: url('../img/letter.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: none;
+    padding: 0;
+    margin: 0;
+    width: 50px;
+    height: 32px;
+}
+
+.subscribe {
+    font-weight: 100;
+    font-size: 26px;
+}
+
+input.signupform.text {
+    width: 240px;
+    height: 38px;
+}
+
+
+@media (max-width: 1366px) {
+
+    /**
+        SignupForm css
+    */
+
+    .flex.signupform {
+        width: 70%;
+    }
+}
+
+
+@media (width: 768px) {
+
+    /**
+        SignupForm css
+    */
+    .main.signupform {
+        height: fit-content;
+    }
+
+    .flex.signupform {
+        width: 100%;
+    }
+
+}

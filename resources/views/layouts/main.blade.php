@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" type="text/css" href="css/app.css" />
         <link rel="stylesheet" type="text/css" href="css/header.css" />
+        <link rel="stylesheet" type="text/css" href="css/footer.css" />
         @yield('static')
         <title>@yield('title')</title>
     </head>
@@ -40,5 +41,17 @@
             </div>
         </header>
         @yield('content')
+    <footer>
+        <div class="main signupform" style="background: none;">
+            <form action="#">
+                <div class="flex signupform">
+                    <input type="submit" class="envelope" value="" />
+                    <div class="subscribe">ПОДПИСАТЬСЯ</div>
+                    <input class="signupform text" type="text" placeholder="Ваше имя" />
+                    <input class="signupform text" type="text" placeholder="Ваш e-mail" />
+                </div>
+            </form>
+        </div>
+    </footer>
     </body>
 </html>
