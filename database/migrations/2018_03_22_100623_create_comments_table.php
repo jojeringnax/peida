@@ -16,13 +16,11 @@ class CreateCommentsTable extends Migration
         Schema::create('comments', function (Blueprint $table) {
             $table->increments('id');
             $table->timestamps();
-            $table->integer('post_id');
-                $table->foreign('post_id')->references('id')->on('posts');
+            $table->integer('post_id')->references('id')->on('posts');
             $table->text('content');
             $table->string('name', 64)->default('Anonymous');
             $table->string('email', 64)->nullable();
-            $table->integer('parent_comment_id');
-                $table->foreign('parent_comment_id')->references('id')->on('comments');
+            $table->integer('parent_comment_id')->references('id')->on('comments');
         });
     }
 
