@@ -4,9 +4,11 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" type="text/css" href="css/app.css" />
-        <link rel="stylesheet" type="text/css" href="css/header.css" />
-        <link rel="stylesheet" type="text/css" href="css/footer.css" />
+        <script src="{{ asset('js/vendor/jquery.min.js') }}"></script>
+        <link rel="stylesheet" type="text/css" href="{{ asset('css/app.css') }}" />
+        <link rel="stylesheet" type="text/css" href="{{ asset('css/header.css') }}" />
+        <link rel="stylesheet" type="text/css" href="{{asset('css/footer.css')}}" />
+        <script type="text/javascript" src="{{ asset('js/header.js') }}"></script>
         @yield('static')
         <title>@yield('title')</title>
     </head>
@@ -31,7 +33,11 @@
                 blog SVETLANA PEIDA
             </div>
             <div class="flex img_header">
-                <img title="Блог Светланы Пейда" alt="Блог Светланы Пейда" src="img/header/header_pic_1.png" />
+                <div class="img_header_wrapper">
+                    <img id="header_img_1" title="Блог Светланы Пейда" alt="Блог Светланы Пейда" src="img/header/header_pic_1.png" style="z-index: 13;" />
+                    <img id="header_img_2" title="Блог Светланы Пейда" alt="Блог Светланы Пейда" src="img/header/header_pic_2.png" style="z-index: 11;" />
+                    <img id="header_img_3" title="Блог Светланы Пейда" alt="Блог Светланы Пейда" src="img/header/header_pic_3.png" style="z-index: 12;" />
+                </div>
             </div>
             <div class="flex navigation">
                 <a href="#blog">БЛОГ</a>

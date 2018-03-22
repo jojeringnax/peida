@@ -15,12 +15,6 @@
     width: 20%;
 }
 
-@media (max-width: 768px) {
-    .row.new_letter_search {
-        width: 100%;
-    }
-}
-
 .flex.new_letter_search {
     align-items: center;
     justify-content: flex-end;
@@ -33,6 +27,18 @@
     padding: 7% 0;
     font-size: 32px;
     font-family: Raleway, sans-serif;
+}
+
+
+.img_header_wrapper {
+    height: 200px;
+    width: 200px;
+    position: relative;
+}
+
+
+.img_header_wrapper > img{
+    position: absolute;
 }
 
 .flex.img_header {
@@ -60,3 +66,10 @@
     color: white;
 }
 
+
+
+@media (max-width: 768px) {
+    .row.new_letter_search {
+        width: 100%;
+    }
+}
