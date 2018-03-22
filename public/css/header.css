@@ -53,6 +53,7 @@
     margin-top: 100px;
     padding: 0 10%;
     padding-bottom: 4%;
+    flex-wrap: wrap;
 }
 
 .navigation a {

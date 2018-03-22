@@ -42,15 +42,30 @@
         </header>
         @yield('content')
     <footer>
-        <div class="main signupform" style="background: none;">
-            <form action="#">
-                <div class="flex signupform">
-                    <input type="submit" class="envelope" value="" />
-                    <div class="subscribe">ПОДПИСАТЬСЯ</div>
-                    <input class="signupform text" type="text" placeholder="Ваше имя" />
-                    <input class="signupform text" type="text" placeholder="Ваш e-mail" />
+        <div class="flex column footer">
+            <div class="flex signupform_navigation">
+                <div class="footer main signupform" style="background: none;">
+                    <form action="#">
+                        <div class="footer flex signupform">
+                            <input type="submit" class="envelope" value="" />
+                            <div class="subscribe">ПОДПИСАТЬСЯ</div>
+                            <input class="signupform text" type="text" placeholder="Ваше имя" />
+                            <input class="signupform text" type="text" placeholder="Ваш e-mail" />
+                        </div>
+                    </form>
                 </div>
-            </form>
+                <div class="flex navigation footer">
+                    <a href="#blog">БЛОГ</a>
+                    <a href="#questions">ВОПРОС-ОТВЕТ</a>
+                    <a href="#library">БИБЛИОТЕКА</a>
+                    <a href="#announces">АНОНСЫ</a>
+                </div>
+            </div>
+            <div class="flex social">
+                <div class="facebook">
+                    <img src="img/"
+                </div>
+            </div>
         </div>
     </footer>
     </body>

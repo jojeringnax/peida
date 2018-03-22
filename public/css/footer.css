@@ -1,10 +1,18 @@
+footer {
+    background: #201600;
+}
 
+
+.flex.signupform_navigation {
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
 /**
-        SignupForm css
+        SignupForm And Navigation css
  */
 
 .main.signupform {
-    height: 150px;
     background-color: lightgrey;
 }
 
@@ -12,8 +20,22 @@
     align-items: center;
     justify-content: space-around;
     flex-wrap: wrap-reverse;
-    width: 50%;
+    width: 70%;
     padding: 50px 0;
+}
+
+.footer.flex.signupform {
+    width: auto;
+}
+
+.footer.flex.signupform > input, .footer.flex.signupform > div{
+    padding: 0;
+    margin: 0 25px;
+}
+
+.footer.flex.navigation {
+    padding: 0;
+    margin: 0;
 }
 
 .envelope {
@@ -38,29 +60,12 @@ input.signupform.text {
 }
 
 
-@media (max-width: 1366px) {
-
-    /**
-        SignupForm css
-    */
-
-    .flex.signupform {
-        width: 70%;
-    }
+.flex.navigation > a {
+    margin: 0 25px;
 }
 
-
-@media (width: 768px) {
-
-    /**
-        SignupForm css
-    */
-    .main.signupform {
-        height: fit-content;
-    }
-
+@media only screen and (max-width: 768px) {
     .flex.signupform {
-        width: 100%;
+        width: auto;
     }
-
 }
