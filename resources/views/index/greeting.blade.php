@@ -9,7 +9,6 @@
         <div class="flex column greetings">
             <div class="head"><h1>ЧТО Я ПРЕДЛАГАЮ?</h1></div>
             <div class="content text_greetings">
-
                 <p>Предлагаю выносить внутренний мусор</p>
                 <p>Чиню заборы личностных границ</p>
                 <p>Снимаю непомерную ношу</p>

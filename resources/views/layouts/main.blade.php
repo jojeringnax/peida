@@ -17,7 +17,7 @@
             <div class="flex new_letter_search">
                 <div class="row new_letter_search">
                     <div class="new col-lg-4 col-md-4 col-sm-4 col-xs-4">
-                        @if (isset($new) && $new)
+                        @if (isset($isNewPostToday) && $isNewPostToday)
                             <span class="new">new!</span>
                         @endif
                     </div>
@@ -52,6 +52,7 @@
             <div class="flex signupform_navigation">
                 <div class="footer main signupform" style="background: none;">
                     <form action="#">
+                        @csrf
                         <div class="footer flex signupform">
                             <input type="submit" class="envelope" value="" />
                             <div class="subscribe">ПОДПИСАТЬСЯ</div>
