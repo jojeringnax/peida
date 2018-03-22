@@ -84,21 +84,21 @@
                 <div class="flex counters">
                     <div class="visitors flex column">
                         <div class="img"><img src="img/footer_bottom/visitors.png" /></div>
-                        <div class="num">5254</div>
+                        <div class="num"></div>
                         <div class="word">Посетители</div>
                     </div>
                     <div class="subscribers flex column">
                         <div class="img"><img src="img/footer_bottom/subscribers.png" /></div>
-                        <div class="num">235</div>
+                        <div class="num"></div>
                         <div class="word">Подписчики</div></div>
                     <div class="soical-networks flex column">
                         <div class="img"><img src="img/footer_bottom/socials.png" /></div>
-                        <div class="num">425</div>
+                        <div class="num"></div>
                         <div class="word">Соцсети</div>
                     </div>
                     <div class="readers flex column">
                         <div class="img"><img src="img/footer_bottom/readers.png" /></div>
-                        <div class="num">123</div>
+                        <div class="num"></div>
                         <div class="word">Читатели</div></div>
                 </div>
             </div>
