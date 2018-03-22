@@ -55,15 +55,51 @@
                     </form>
                 </div>
                 <div class="flex navigation footer">
-                    <a href="#blog">БЛОГ</a>
-                    <a href="#questions">ВОПРОС-ОТВЕТ</a>
-                    <a href="#library">БИБЛИОТЕКА</a>
-                    <a href="#announces">АНОНСЫ</a>
+                    <a href="#blog">Блог</a>
+                    <a href="#questions">Вопрос-Ответ</a>
+                    <a href="#library">Библиотека</a>
+                    <a href="#announces">Анонсы</a>
                 </div>
             </div>
             <div class="flex social">
                 <div class="facebook">
-                    <img src="img/"
+                    <img src="img/social/facebook.png" />
+                </div>
+                <div class="twitter">
+                    <img src="img/social/twitter.png" />
+                </div>
+                <div class="google">
+                    <img src="img/social/google.png" />
+                </div>
+                <div class="linkedIn">
+                    <img src="img/social/linkedIn.png" />
+                </div>
+                <div class="vk">
+                    <img src="img/social/vk.png" />
+                </div>
+            </div>
+            <div class="flex footer_bottom">
+                <div class="copyrights">© 2018 Сайт разработан BI+TB</div>
+                <div class="usefull">При разработке сайта были использованы материалы художника Кевин Слоан</div>
+                <div class="flex counters">
+                    <div class="visitors flex column">
+                        <div class="img"><img src="img/footer_bottom/visitors.png" /></div>
+                        <div class="num">5254</div>
+                        <div class="word">Посетители</div>
+                    </div>
+                    <div class="subscribers flex column">
+                        <div class="img"><img src="img/footer_bottom/subscribers.png" /></div>
+                        <div class="num">235</div>
+                        <div class="word">Подписчики</div></div>
+                    <div class="soical-networks flex column">
+                        <div class="img"><img src="img/footer_bottom/socials.png" /></div>
+                        <div class="num">425</div>
+                        <div class="word">Соцсети</div>
+                    </div>
+                    <div class="readers flex column">
+                        <div class="img"><img src="img/footer_bottom/readers.png" /></div>
+                        <div class="num">123</div>
+                        <div class="word">Читатели</div></div>
                 </div>
             </div>
         </div>
