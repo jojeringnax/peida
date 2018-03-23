@@ -1,0 +1,14 @@
+form {
+    width: 80%;
+}
+.form_wrapper {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px 0;
+}
+
+textarea {
+    max-width: 100%;
+    min-width: 100%;
+    min-height: 200px;
+}

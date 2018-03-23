@@ -1,0 +1,29 @@
+.posts_table {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 40px;
+}
+
+.lead {
+    width: 80%;
+    text-align: center;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+.button_create {
+    width: 80%;
+    display: flex;
+    justify-content: flex-end;
+    margin: 0 auto;
+}
+
+table {
+    width: 80%;
+}
+
+th, td {
+    text-align: center;
+    padding: 10px 25px;
+}

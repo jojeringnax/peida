@@ -13,4 +13,4 @@
 
 Route::get('/', 'IndexController@getIndex');
 
-Route::resource('photos', 'PostController');
+Route::resource('posts', 'PostController');

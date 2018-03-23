@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Post;
 use Illuminate\Http\Request;
 
 class IndexController extends Controller
@@ -10,6 +11,10 @@ class IndexController extends Controller
     public function getIndex()
     {
 
-        return view('index');
+        $last14Posts = Post::getLastPosts();
+
+        return view('index', array(
+            'last14posts' => $last14Posts
+        ));
     }
 }
