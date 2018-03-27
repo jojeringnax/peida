@@ -12,27 +12,25 @@
                    $('small').html('Введено ' + this.value.length + ' из 191');
                }
            });
-           var tagsInput = $('input#tags'), tagsResult = $('div.tags-result');
+           var tagsInput = $('input#tags'), tagsResult = $('div.tags-result'), html = '';
+           var tagsArray;
            tagsInput.on('input', function() {
-               if (window.tagsNum && tagsInput.val() === '') {
-                   tagsResult.children().each(function() {$(this).remove()});
-                   window.tagsNum = 0;
-               }
-               if (tagsInput.val().slice(-1) === ',') {
-                   var tagsArray = tagsInput.val().split(",");
-                   console.log(window.tagsNum + '  array lkbyf= ' + (tagsArray.length - 1));
-                   if (window.tagsNum > tagsArray.length - 1) {
-                       tagsResult.children()[window.tagsNum-1].remove();
+                tagsArray  = $(this).val().split(",");
+
+                if ($(this).val().slice(-1) === ',' || $(this).val() === '') {
+                    html = '';
+                    for (i=0;i<tagsArray.length - 1;i++) {
+                        html += '<div class="cool_tag">' + tagsArray[i] + '</div>';
+                    }
+                    tagsResult.html(html);
+                } else {
+                   if(tagsResult.children().last().html() === tagsArray[tagsArray.length - 2]) {
+                       tagsResult.append('<div class="cool_tag">' + tagsArray[tagsArray.length - 1] + '</div>');
                    } else {
-                       tagsResult.append(
-                           '<div class="cool_tag" data-number="'
-                           + (window.tagsNum)
-                           + '">'
-                           + tagsArray[window.tagsNum || 0]
-                           + '</div>')
+                       tagsResult.children().last().html(tagsArray[tagsArray.length - 1]);
                    }
-                   window.tagsNum = tagsArray.length - 1;
-               }
+                }
+
            });
         });
     </script>
@@ -55,7 +53,7 @@
                 <small id="tagsHelp" class="form-text text-muted">Тэги необходимо указывать через запятую.</small>
             </div>
             <div class="tags-result">
-
+                <div class="cool_tag" data-number="0"></div>
             </div>
             <div class="form-check">
                 <input type="checkbox" class="form-check-input" checked="checked" id="active">
