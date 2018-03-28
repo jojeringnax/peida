@@ -14,16 +14,16 @@
                     <div class="flex post_row">
                 @endif
                 @if ($loop->index == 7)
-                    <div class="post flex column">
+                    <div class="post flex column image">
                         <img src="{{ asset('img/rabbit.png') }}" />
                     </div>
                 @endif
-                <div class="post flex column">
+                <div class="post flex column no-image">
                     <div class="flex typeTitle">
 
                         <div class="flex column newType">
                             <div class="post_new">{{ $post->isTodayPost() ? 'new!' : '' }}</div>
-                            <div class="post_type">{{ $post->type }}</div>
+                            <div class="post_type"><img src="{{ asset('img/pic/'.$post->type.'.png') }}"/></div>
                         </div>
                         <abbr title="{{ $post->title }}">
                             <span class="post_title">{{ substr($post->title, 0, 50).'...' }}</span>

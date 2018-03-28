@@ -1,6 +1,7 @@
 @extends('layouts.main')
     @section('static')
         <link rel="stylesheet" type="text/css" href="{{ asset('css/index.css') }}" />
+        <script type="text/javascript" src="{{ asset('js/posts.js') }}"></script>
     @endsection
 
 @section('content')
