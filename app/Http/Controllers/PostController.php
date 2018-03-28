@@ -27,7 +27,9 @@ class PostController extends Controller
      */
     public function create()
     {
-        return view('posts.create');
+        return view('posts.form', array(
+            'action' => 'create'
+        ));
     }
 
     /**
@@ -38,7 +40,10 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
-        $request->input();
+        $post = new Post();
+        $post->fill($request->input());
+        $post->save();
+        return redirect('posts');
     }
 
     /**
@@ -49,7 +54,10 @@ class PostController extends Controller
      */
     public function show($id)
     {
-        //
+        $post = Post::find($id);
+        return view('posts.show', array(
+            'post' => $post
+        ));
     }
 
     /**
@@ -60,7 +68,11 @@ class PostController extends Controller
      */
     public function edit($id)
     {
-        //
+        $post = Post::find($id);
+        return view('posts.form', array(
+            'action' => 'edit',
+            'post'   => $post
+        ));
     }
 
     /**
@@ -72,17 +84,21 @@ class PostController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $post = Post::find($id);
+        $post->fill($request->input());
+        $post->save();
+        return redirect('posts');
     }
 
     /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @param $id
+     * @return \Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
+     * @throws \Exception
      */
     public function destroy($id)
     {
-        //
+        $post = Post::find($id);
+        $post->delete();
+        return redirect('posts');
     }
 }

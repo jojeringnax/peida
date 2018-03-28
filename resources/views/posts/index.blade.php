@@ -1,7 +1,4 @@
 @extends('posts.main')
-    @section('assets')
-        <link rel="stylesheet" type="text/css" href="{{ asset('css/posts/index.css') }}" />
-    @endsection
     @section('content')
         <div class="lead">
             Здравствуйте! Добро пожаловать на страницу просмотра и редактирования статей сайта Блог Светланы Пейда.
@@ -33,7 +30,11 @@
                             <td>{{ $post->content }}</td>
                             <td>{{ $post->tags }}</td>
                             <td>{{ $post->status == 1 ? 'Активен' : 'Деактивирован'}}</td>
-                            <td>Действия</td>
+                            <td>
+                                <a href="posts/{{ $post->id }}"><span class="glyphicon glyphicon-eye-open"></span></a>
+                                <a href="posts/{{ $post->id }}/edit"><span class="glyphicon glyphicon-pencil"></span></a>
+                                <a href="destroy/{{ $post->id }}"><span class="glyphicon glyphicon-trash"></span></a>
+                            </td>
                         </tr>
                     @endforeach
                 @else

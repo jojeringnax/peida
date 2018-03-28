@@ -37,6 +37,15 @@ class Post extends Model
         )->get() != array() ? false : true;
     }
 
+    public static function find($id)
+    {
+        return self::where('id', $id)->first();
+    }
+
+    /**
+     * @param int $limit
+     * @return \Illuminate\Database\Eloquent\Collection|\Illuminate\Support\Collection|static[]
+     */
     public static function getLastPosts($limit = 14)
     {
         return self::where('active', '=', 1)->orderBy('created_at', 'desc')->take($limit)->get();

@@ -12,3 +12,16 @@ textarea {
     min-width: 100%;
     min-height: 200px;
 }
+
+div.tags-result {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: flex-start;
+}
+
+div.cool_tag {
+    padding: 2px;
+    background-color: #eeeeee;
+    margin: 0 2px;
+}
