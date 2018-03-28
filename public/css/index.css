@@ -35,10 +35,87 @@ img.greetings {
         Posts css
  */
 
+div.post_row {
+    margin: 25px 0;
+}
 
-/**
-        Questions css
- */
+div.post.flex.column {
+    height: 200px;
+    width: 20%;
+    word-break: break-all;
+    text-align: justify;
+    padding: 0 15px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+div.post > img {
+    height: 200px;
+}
+
+div.flex.typeTitle {
+    width: 100%;
+    justify-content: space-between;
+}
+
+span.post_title {
+    color: black;
+    font-style: oblique;
+}
+
+abbr, abbr[title], div.post_tags {
+    max-width: 70%;
+}
+
+abbr, abbr[title]  {
+    text-decoration: none;
+    border: none;
+    cursor: default;
+}
+
+div.post_new {
+    min-width: 32px;
+    color: red;
+}
+
+div.post_content {
+    height: 100px;
+    overflow: -webkit-paged-y;
+    overflow: paged-y-controls;
+}
+
+div.flex.postFooter {
+    width: 100%;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+div.views_num, div.comments_num {
+    color: red;
+    padding-left: 2px;
+}
+
+div.views_img, div.comments_img {
+    width: 16px;
+}
+
+div.views_img > img, div.comments_img > img {
+    width: 100%;
+}
+
+div.post_tags {
+    color: black;
+    font-size: 12px;
+    height: 22px;
+    overflow: -webkit-paged-y;
+    text-overflow: ellipsis;
+    overflow: paged-y-controls;
+}
+
+
+    /**
+            Questions css
+     */
 
 .flex.questions {
     background-color: #201600;

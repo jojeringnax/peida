@@ -8,7 +8,7 @@
                 Для отображения данных необходимо <a href="create">создать статью</a> .</div>
             @endif
         </div>
-        <div class="button_create"><a href="create" type="button" class="btn btn-success">Создать статью</a></div>
+        <div class="button_create"><a href="posts/create" type="button" class="btn btn-success">Создать статью</a></div>
         <div class="posts_table">
             <table class="table-bordered">
                 <thead>
@@ -27,9 +27,9 @@
                         <tr>
                             <th scope="row">{{ $post->id }}</th>
                             <td>{{ $post->title }}</td>
-                            <td>{{ $post->content }}</td>
+                            <td>{{ substr($post->content, 0, 100).'...' }}</td>
                             <td>{{ $post->tags }}</td>
-                            <td>{{ $post->status == 1 ? 'Активен' : 'Деактивирован'}}</td>
+                            <td>{{ $post->active == 1 ? 'Активен' : 'Деактивирован'}}</td>
                             <td>
                                 <a href="posts/{{ $post->id }}"><span class="glyphicon glyphicon-eye-open"></span></a>
                                 <a href="posts/{{ $post->id }}/edit"><span class="glyphicon glyphicon-pencil"></span></a>

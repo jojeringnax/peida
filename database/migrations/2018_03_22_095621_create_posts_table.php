@@ -18,7 +18,7 @@ class CreatePostsTable extends Migration
             $table->timestamps();
             $table->string('title');
             $table->text('content');
-            $table->string('text', 10)->default('text');
+            $table->string('type', 10)->default('text');
             $table->integer('views_counter')->default(0);
             $table->integer('comments_counter')->default(0);
             $table->string('tags')->nullable();

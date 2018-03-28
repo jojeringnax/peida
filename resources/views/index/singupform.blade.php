@@ -1,7 +1,6 @@
 <section id="signupform">
     <div class="main signupform">
         <form action="#">
-            @csrf
             <div class="flex signupform">
                 <input type="submit" class="envelope" value="" />
                 <div class="subscribe">ПОДПИСАТЬСЯ</div>

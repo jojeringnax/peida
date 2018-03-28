@@ -27,19 +27,9 @@ class Post extends Model
     /**
      * @return bool
      */
-    public static function isNewPostsToday()
+    public static function isNewPostToday()
     {
-        return self::whereBetween(
-            'created_at', array(
-                date('Y-m-d H:i:s', time() - 3600*24),
-                date('Y-m-d H:i:s', time())
-            )
-        )->get() != array() ? false : true;
-    }
-
-    public static function find($id)
-    {
-        return self::where('id', $id)->first();
+        return self::whereDate('created_at', '=', date('Y-m-d'))->get() === array() ? false : true;
     }
 
     /**
@@ -49,6 +39,14 @@ class Post extends Model
     public static function getLastPosts($limit = 14)
     {
         return self::where('active', '=', 1)->orderBy('created_at', 'desc')->take($limit)->get();
+    }
+
+    /**
+     * @return bool
+     */
+    public function isTodayPost()
+    {
+        return date('Y-m-d', strtotime($this->created_at)) === date('Y-m-d') ? true : false;
     }
 
 

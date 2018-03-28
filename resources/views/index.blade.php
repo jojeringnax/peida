@@ -1,6 +1,6 @@
 @extends('layouts.main')
     @section('static')
-        <link rel="stylesheet" type="text/css" href="css/index.css" />
+        <link rel="stylesheet" type="text/css" href="{{ asset('css/index.css') }}" />
     @endsection
 
 @section('content')

@@ -42,6 +42,7 @@ class PostController extends Controller
     {
         $post = new Post();
         $post->fill($request->input());
+        $post->active = $request->input('status') == 'on' ? 1 : 0;
         $post->save();
         return redirect('posts');
     }
@@ -86,6 +87,7 @@ class PostController extends Controller
     {
         $post = Post::find($id);
         $post->fill($request->input());
+        $post->active = $request->input('status') == 'on' ? 1 : 0;
         $post->save();
         return redirect('posts');
     }
