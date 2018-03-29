@@ -47,6 +47,7 @@
             <div class="flex signupform_navigation">
                 <div class="footer main signupform" style="background: none;">
                     <form action="#">
+                        <input type="hidden" name="_token" id="csrf-token" value="{{ csrf_token() }}" />
                         <div class="footer flex signupform">
                             <input type="submit" class="envelope" value="" />
                             <div class="subscribe">ПОДПИСАТЬСЯ</div>

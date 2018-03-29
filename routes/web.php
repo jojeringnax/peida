@@ -16,3 +16,6 @@ Route::get('/', 'IndexController@getIndex');
 Route::get('/post/{id}', 'PostController@userView');
 
 Route::resource('posts', 'PostController');
+
+
+Route::post('comments', 'CommentController@postComment');

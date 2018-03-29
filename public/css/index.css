@@ -39,20 +39,26 @@ div.flex.main_in_posts {
     background-color: white;
 }
 
-div.post_row {
+div.flex.post_row {
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
     margin: 15px 0;
 }
 
 div.post.flex.column {
     border: 2px solid white;
     height: 200px;
-    width: 20%;
     word-break: break-all;
     text-align: justify;
     padding: 5px 15px;
     margin: 0 10px;
     align-items: center;
     justify-content: space-between;
+    width: 18%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 div.post > img {

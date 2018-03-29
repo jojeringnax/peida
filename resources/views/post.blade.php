@@ -2,10 +2,30 @@
 @section('title')
     {{ $post->title }}
 @endsection
+@section('static')
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/post/style.css') }}" />
+    <script type="text/javascript" src="{{ asset('js/post/comment.js') }}"></script>
+@endsection
 @section('navigation')
     <a href="/"><div class="home">На главную</div></a>
 @endsection
 @section('content')
-    <div class="h1 title">{{ $post->title }}</div>
-    <div class="content">{{ $post->content }}</div>
+    <div class="view">
+        <div class="date">{{ $post->created_at }}</div>
+        <div class="h1 title">{{ $post->title }}</div>
+        <div class="flex tags">
+        @foreach(explode(',', $post->tags) as $tag)
+                <div class="tag">{{ $tag }}</div>
+        @endforeach
+        </div>
+        <div class="content">{{ $post->content }}</div>
+        <form class="flex column comment">
+            <input type="hidden" name="_token" id="csrf-token" value="{{ csrf_token() }}" />
+            <input type="text" name="name"  placeholder="Name..." />
+            <input type="email" name="email" placeholder="Email..." />
+            <textarea name="content"></textarea>
+            <button type="submit" class="btn-success btn">Отправить</button>
+        </form>
+        <div class="comments"></div>
+    </div>
 @endsection
