@@ -29,7 +29,7 @@ class Post extends Model
      */
     public static function isNewPostToday()
     {
-        return self::whereDate('created_at', '=', date('Y-m-d'))->get() === array() ? false : true;
+        return self::whereDate('created_at', '=', date('Y-m-d'))->first() == null ? false : true;
     }
 
     /**

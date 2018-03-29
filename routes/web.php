@@ -13,4 +13,6 @@
 
 Route::get('/', 'IndexController@getIndex');
 
+Route::get('/post/{id}', 'PostController@userView');
+
 Route::resource('posts', 'PostController');

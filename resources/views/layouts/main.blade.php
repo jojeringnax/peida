@@ -39,12 +39,7 @@
                     <img id="header_img_3" title="Блог Светланы Пейда" alt="Блог Светланы Пейда" src="{{ asset('img/header/header_pic_3.png') }}" style="z-index: 12;" />
                 </div>
             </div>
-            <div class="flex navigation">
-                <a href="#blog">БЛОГ</a>
-                <a href="#questions">ВОПРОС-ОТВЕТ</a>
-                <a href="#library">БИБЛИОТЕКА</a>
-                <a href="#announces">АНОНСЫ</a>
-            </div>
+            @yield('navigation')
         </header>
         @yield('content')
     <footer>

@@ -65,6 +65,10 @@ div.flex.typeTitle {
 }
 
 span.post_title {
+    display: block;
+    height: 45px;
+    overflow: -webkit-paged-y;
+    overflow: paged-y-controls;
     color: black;
     font-style: oblique;
 }

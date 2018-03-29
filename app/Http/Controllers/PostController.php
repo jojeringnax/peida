@@ -103,4 +103,12 @@ class PostController extends Controller
         $post->delete();
         return redirect('posts');
     }
+
+    public function userView($id)
+    {
+        $post = Post::find($id);
+        return view('post', array(
+            'post' => $post
+        ));
+    }
 }
