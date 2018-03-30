@@ -19,6 +19,11 @@ class CommentController extends Controller
      */
     public function postComment(Request $request)
     {
-        return $request->input();
+        return json_encode($request->input());
+    }
+
+    public function deleteComment()
+    {
+
     }
 }

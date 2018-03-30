@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Comment;
 use App\Models\Post;
 use Illuminate\Http\Request;
 
@@ -104,11 +105,14 @@ class PostController extends Controller
         return redirect('posts');
     }
 
+
     public function userView($id)
     {
         $post = Post::find($id);
+        $comments = Comment::getPostComments($id);
         return view('post', array(
-            'post' => $post
+            'post' => $post,
+            'comments' => $comments
         ));
     }
 }

@@ -35,4 +35,12 @@ class Comment extends Model
     public function parentComment() {
         return $this->belongsTo('Comment', 'parent_comment_id', 'id');
     }
+
+    /**
+     * @param $postId
+     * @return Model|null|static
+     */
+    public static function getPostComments($postId) {
+        return self::where('post_id', '=', $postId)->first();
+    }
 }

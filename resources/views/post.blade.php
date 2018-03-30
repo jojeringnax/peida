@@ -26,6 +26,18 @@
             <textarea name="content"></textarea>
             <button type="submit" class="btn-success btn">Отправить</button>
         </form>
-        <div class="comments"></div>
+        <div data-post_id="{{ $post->id }}" class="comments">
+            @if (!empty($comments))
+                @foreach($comments as $comment)
+                    <div class="comment">
+                        <div class="author">{{ $comment->name }}</div>
+                        <div class="time">{{ $comment->created_at }}</div>
+                        <div class="content">{{ $comment->content }}</div>
+                    </div>
+                @endforeach
+            @else
+                <div class="sorry">Сорян</div>
+            @endif
+        </div>
     </div>
 @endsection
