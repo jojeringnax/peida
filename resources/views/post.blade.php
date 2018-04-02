@@ -20,6 +20,7 @@
         </div>
         <div class="content">{{ $post->content }}</div>
         <form class="flex column comment">
+            <input type="hidden" name="post_id" value="{{ $post->id }}" />
             <input type="hidden" name="_token" id="csrf-token" value="{{ csrf_token() }}" />
             <input type="text" name="name"  placeholder="Name..." />
             <input type="email" name="email" placeholder="Email..." />

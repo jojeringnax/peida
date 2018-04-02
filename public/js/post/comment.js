@@ -1,10 +1,9 @@
 $(document).ready( function() {
     var commentHtml =
-'<div class="comment" data-comment_id="{{ id }}"><div class="author">{{ author }}</div><div class="time">{{ time }}</div><div class="content">{{ content }}</div></div>';
+'<div class="comment" data-comment_id="{{ id }}"><div class="author">{{ author }}</div><div class="time">{{ time }}</div><div class="content">{{ content }}</div>';
     $('form.comment').submit( function(e) {
         $.ajax({
             context: $('div.comments'),
-            headers: {'X-CSRF-Token': $('input[name="_token"]').val()},
             method: 'post',
             dataType: 'json',
             data: $('form.comment').serialize(),
@@ -16,16 +15,16 @@ $(document).ready( function() {
                 replace('{{ author }}', data['name']).
                 replace('{{ time }}', data['created_at']).
                 replace('{{ content }}', data['content']) +
-                '<div class=""deleteButton">Удалить</div>'
+                '<div class="deleteButton">Удалить</div></div>'
             );
-            $('deleteButton').click( function() {
+            $('.deleteButton').click( function() {
+                var commentDiv = $(this).parent('.comment');
                $.ajax({
-                   context: $(this).parent(),
                    url: '/comments/delete',
                    method: 'post',
-                   data: $(this).data('comment_id')
+                   data: 'comment_id=' + commentDiv.data('comment_id') + '&_token=' + $('form.comment > input#csrf-token').val()
                }).done( function() {
-                  $(this).remove();
+                  commentDiv.remove();
                });
             });
         });

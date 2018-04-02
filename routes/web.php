@@ -19,4 +19,4 @@ Route::resource('posts', 'PostController');
 
 
 Route::post('comments', 'CommentController@postComment');
-Route::post('comments/delete', 'CommentController@deleteComment');
+Route::post('comments/delete', 'CommentController@deleteAjaxComment');

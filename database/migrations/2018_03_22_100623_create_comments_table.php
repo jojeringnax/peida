@@ -20,7 +20,7 @@ class CreateCommentsTable extends Migration
             $table->text('content');
             $table->string('name', 64)->default('Anonymous');
             $table->string('email', 64)->nullable();
-            $table->integer('parent_comment_id')->references('id')->on('comments');
+            $table->integer('parent_comment_id')->default(0)->references('id')->on('comments');
         });
     }
 

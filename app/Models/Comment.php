@@ -41,6 +41,6 @@ class Comment extends Model
      * @return Model|null|static
      */
     public static function getPostComments($postId) {
-        return self::where('post_id', '=', $postId)->first();
+        return self::where('post_id', '=', $postId)->get();
     }
 }
