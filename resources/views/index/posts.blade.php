@@ -26,7 +26,7 @@
                             <div class="post_type"><img src="{{ asset('img/pic/'.$post->type.'.png') }}"/></div>
                         </div>
                         <abbr title="{{ $post->title }}">
-                            <span class="post_title">{{ $post->title }}</span>
+                            <a href="post/{{ $post->id }}"><span class="post_title">{{ $post->title }}</span></a>
                         </abbr>
                     </div>
                     <div class="post_content">{{ $post->content }}</div>

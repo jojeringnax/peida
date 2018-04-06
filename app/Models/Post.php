@@ -49,5 +49,15 @@ class Post extends Model
         return date('Y-m-d', strtotime($this->created_at)) === date('Y-m-d') ? true : false;
     }
 
+    /**
+     * @param $postId
+     */
+    public static function updateCommentCounter($postId, $polus=1)
+    {
+        $post = self::find($postId);
+        $post->comments_counter += $polus;
+        $post->save();
+    }
+
 
 }

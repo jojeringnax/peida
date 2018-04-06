@@ -10,6 +10,8 @@ namespace App\Http\Controllers;
 
 
 use App\Models\Comment;
+use App\Models\Post;
+use Carbon\Carbon;
 use \Illuminate\Http\Request;
 
 class CommentController extends Controller
@@ -26,11 +28,14 @@ class CommentController extends Controller
         $comment->email = $request->get('email');
         $comment->post_id = $request->get('post_id');
         $comment->save();
+
+        Post::updateCommentCounter($request->get('post_id'));
+
         $resultArray = array(
             'id' => $comment->id,
             'name' => $comment->name,
             'content' => $comment->content,
-            'created_at' => $comment->created_at
+            'created_at' => $comment->created_at->toDateTimeString()
         );
         return json_encode($resultArray);
     }
@@ -38,6 +43,7 @@ class CommentController extends Controller
     public function deleteAjaxComment(Request $request)
     {
         $comment = Comment::find($request->get('comment_id'));
+        Post::updateCommentCounter($comment->post_id, -1);
         $comment->delete();
         return json_encode(array('result' => true));
     }

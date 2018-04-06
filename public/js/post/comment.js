@@ -9,7 +9,7 @@ $(document).ready( function() {
             data: $('form.comment').serialize(),
             url: '/comments/'
         }).done( function(data) {
-            $(this).html(
+            $(this).append(
                 commentHtml.
                 replace('{{ id }}', data['id']).
                 replace('{{ author }}', data['name']).
