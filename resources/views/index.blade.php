@@ -2,6 +2,7 @@
 @section('static')
     <link rel="stylesheet" type="text/css" href="{{ asset('css/index.css') }}" />
     <script type="text/javascript" src="{{ asset('js/posts.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/app.js') }}"></script>
 @endsection
 
 @section('navigation')

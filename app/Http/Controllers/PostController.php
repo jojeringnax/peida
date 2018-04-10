@@ -105,7 +105,10 @@ class PostController extends Controller
         return redirect('posts');
     }
 
-
+    /**
+     * @param int $id
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
     public function userView($id)
     {
         $post = Post::find($id);
