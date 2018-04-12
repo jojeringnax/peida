@@ -7,6 +7,7 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'AddActiveColumnToPostsTable' => $baseDir . '/database/migrations/2018_03_22_115903_add_active_column_to_posts_table.php',
+    'AddActiveColumnToQuestionsTable' => $baseDir . '/database/migrations/2018_04_11_070101_add_active_column_to_questions_table.php',
     'App\\Console\\Kernel' => $baseDir . '/app/Console/Kernel.php',
     'App\\Exceptions\\Handler' => $baseDir . '/app/Exceptions/Handler.php',
     'App\\Http\\Controllers\\Auth\\ForgotPasswordController' => $baseDir . '/app/Http/Controllers/Auth/ForgotPasswordController.php',

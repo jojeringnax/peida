@@ -27,8 +27,8 @@
                         <td>{{ $question->answer }}</td>
                         <td>{{ $question->active == 1 ? 'Активен' : 'Деактивирован'}}</td>
                         <td>
-                            <a href="posts/{{ $question->id }}"><span class="glyphicon glyphicon-eye-open"></span></a>
-                            <a href="posts/{{ $question->id }}/edit"><span class="glyphicon glyphicon-pencil"></span></a>
+                            <a href="questions/{{ $question->id }}"><span class="glyphicon glyphicon-eye-open"></span></a>
+                            <a href="questions/{{ $question->id }}/edit"><span class="glyphicon glyphicon-pencil"></span></a>
                             <a href="destroy/{{ $question->id }}"><span class="glyphicon glyphicon-trash"></span></a>
                         </td>
                     </tr>

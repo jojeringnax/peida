@@ -136,6 +136,7 @@ div.post_tags {
             Questions css
      */
 
+
 .flex.questions {
     background-color: #201600;
     color: white;
@@ -151,10 +152,37 @@ div.post_tags {
     margin: 0 15px;
 }
 
+.question_form {
+    background: transparent;
+    border: none;
+}
+
 .ask_a_question {
     font-size: 32px;
     letter-spacing: 3px;
     font-weight: 100;
+}
+
+.questions.viewport {
+    overflow: hidden;
+    width: 400px;
+    height: 100%;
+}
+
+.questions_wrapper {
+    height: 100%;
+}
+
+.question_window {
+    width: 200px;
+}
+
+.questions_slider .arrow {
+    width: 30px;
+}
+
+.questions_slider .arrow img {
+    width: 100%;
 }
 
 .sveta_portrait > img {
@@ -165,6 +193,15 @@ div.post_tags {
     align-items: center;
     justify-content: space-around;
     flex-wrap: wrap;
+}
+
+.question_text {
+    font-weight: bold;
+}
+
+.answer_text {
+    font-style: italic;
+    font-weight: 100;
 }
 
 /**

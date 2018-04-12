@@ -280,6 +280,7 @@ class ComposerStaticInit18a3ba75ddcb628f0a2765efe5c19442
 
     public static $classMap = array (
         'AddActiveColumnToPostsTable' => __DIR__ . '/../..' . '/database/migrations/2018_03_22_115903_add_active_column_to_posts_table.php',
+        'AddActiveColumnToQuestionsTable' => __DIR__ . '/../..' . '/database/migrations/2018_04_11_070101_add_active_column_to_questions_table.php',
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
         'App\\Http\\Controllers\\Auth\\ForgotPasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ForgotPasswordController.php',

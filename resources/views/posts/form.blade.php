@@ -66,7 +66,7 @@
                 @endif
             </div>
             <div class="form-check">
-                <input name="status" type="checkbox" class="form-check-input" checked="checked" id="active">
+                <input name="status" type="checkbox" class="form-check-input" {{ $post->active ? 'checked' : ''}} id="active">
                 <label class="form-check-label"for="active">Активная</label>
             </div>
             <div style="width: 100%; display: flex; align-items: center; justify-content: space-between;">

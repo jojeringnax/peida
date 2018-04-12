@@ -23,4 +23,9 @@ class Question extends Model
       'answer',
       'status'
     );
+
+    public static function getActiveAnsweredQuestions()
+    {
+        return self::where('active', '=', 1)->where('answer', '!=', null)->get();
+    }
 }

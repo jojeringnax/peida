@@ -37,51 +37,66 @@ class QuestionController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $question = new Question();
+        $question->question = $request->get('question');
+        $question->save();
+        return json_encode(array('id' => 1));
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Question  $question
+     * @param  integer id
      * @return \Illuminate\Http\Response
      */
-    public function show(Question $question)
+    public function show($id)
     {
-        //
+        $question = Question::find($id);
+        return view('questions.show', array(
+           'question' => $question
+        ));
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Question  $question
+     * @param  integer $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Question $question)
+    public function edit($id)
     {
-        //
+        $question = Question::find($id);
+        return view('questions.form', array(
+            'question' => $question
+        ));
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Question  $question
+     * @param  integer $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Question $question)
+    public function update(Request $request, $id)
     {
-
+        $question = Question::find($id);
+        $question->answer = $request->input('answer');
+        $question->active = $request->input('status') == 'on' ? 1 : 0;
+        $question->save();
+        return redirect('questions');
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Question $question
+     * @param  integer $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Question $question)
+    public function destroy($id)
     {
-        //
+        $question = Question::find($id);
+        $question->delete();
+        return redirect('questions');
     }
 }
